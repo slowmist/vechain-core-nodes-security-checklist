@@ -1,14 +1,15 @@
 # VeChain core nodes security checklist
 
 > by SlowMist Security Team & Joinsec Team
+> 
 > Thanks VeChain Team for translation
 
 ### [中文版](./README.md)
 
 ## table of contents
-* [security program](#Introduction-to-Security-Program)
+* [security program](#introduction-to-security-program)
 * [core targets of framework](#core-targets-of-framework)
-* [major problems VeChainThor is confronting](#major-problems-VeChainThor-is-confronting)
+* [major problems VeChainThor is confronting](#major-problems-vechainthor-is-confronting)
 * [core design of framework architecture](#core-design-of-framework-architecture)
 * [core defense](#core-defense)
 * [recommended general framework](#recommended-general-framework)
@@ -30,7 +31,7 @@
 	* [4. main server security](#4-main-server-security)
 	* [5. threat intelligence](#5-threat-intelligence)
 	* [6. NormalNode core security configuration summary](#6-normalnode-core-security-configuration-summary)
-* [Acknowledgment](#Acknowledgment)
+* [Acknowledgment](#acknowledgment)
 
 ## Introduction to Security Program
 Given the fact that VeChain decentralized design does not strictly depend on one single node, the core design desicates to ensuring there are certain amount of secure masternodes in the entire network.
