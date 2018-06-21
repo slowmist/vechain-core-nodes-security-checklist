@@ -15,7 +15,7 @@
 * [recommended general framework](#recommended-general-framework)
 	* [detailed explaination of each part of architecture design](#detailed-explaination-of-each-part-of-architecture-design)
 		* [1. BootNode](#1-bootnode)
-		* [2. MasterNode](#2-masternode)
+		* [2. Authority Masternode](#2-authority-masternode)
 * [security enhancement program](#security-enhancement-program)
 	* [1. HTTP API security](#1-http-api-security)
 		* [1.1 shielding HTTP API](#11-shielding-http-api)
@@ -34,31 +34,31 @@
 * [Acknowledgment](#acknowledgment)
 
 ## Introduction to Security Program
-Given the fact that VeChain decentralized design does not strictly rely on one single node, the core design desicates to ensuring there are certain amount of secure masternodes in the entire network.
+Given the fact that VeChain decentralized design does not strictly rely on one single node, the core design desicates to ensuring there are certain amount of secure Authority Masternodes in the entire network.
 
 ## core targets of framework
 
 1. Protecting security of normal node's HTTP API.
-2. Protecting the communication and operation of MasterNode server.
+2. Protecting the communication and operation of Authority Masternode server.
 3. Protecting the communication and security of BootNodes in the preliminary stage.
 4. Enhancing the main net anti-attack capability in the initial phase.
 
 ## major problems VeChainThor is confronting
 
-1. Targeted attack on BootNode and MasterNode, such as DDOS attack.
+1. Targeted attack on BootNode and Authority Masternode, such as DDOS attack.
 2. HTTP API abuse and unauthorized access to HTTP API functions.
 3. Network communication obstacles.
 
 ## core design of framework architecture
 
 1. Guarantee the high availability of BootNode list and deploy targeted defense approach.
-2. Compared to EOS framework, VeChainThor lowers the cost of single node adequately, and increases the number of nodes, and guarantees the stability of MasterNode.
+2. Compared to EOS framework, VeChainThor lowers the cost of single node adequately, and increases the number of nodes, and guarantees the stability of Authority Masternode.
 
 ## core defense
 
 1. By default, HTTP API is closed. When it's necessary to open the HTTP，VeChainThor messes up the port and sets DDoS defense protection.
 2. VeCHainThor increases the number of BootNodes, and is able to guarantee high recoverability after DDoS attack.
-3. MasterNodes that are exposed to public network, are deployed with some anti-DDoS attack defense system, making sure the stability of entire network.
+3. Authority Masternodes that are exposed to public network, are deployed with some anti-DDoS attack defense system, making sure the stability of entire network.
 
 ## recommended general framework
 
@@ -68,7 +68,7 @@ Architecture explaination：
 
 Given the feature of VeChain, the core design of this architecture is to make sure the robustness of the entire network.
 
-For against the DDoS attack, main nodes (BootNode and MasterNode) should deploy DDoS defense system, protecting BootNode providing inilization service for normal nodes;
+For against the DDoS attack, main nodes (BootNode and Authority Masternode) should deploy DDoS defense system, protecting BootNode providing inilization service for normal nodes;
 
 and
 
@@ -80,9 +80,9 @@ because of the limited number of nodes in the initial phase, the entire network 
 #### 1. BootNode
 BootNode is a fixed network initilisation node, used for discovering other nodes. The core defense strategy is to increase the number of nodes and distribute nodes to different network segments. It is suggested to use DNS (instead of fixed IP) nodes, and 20 domains inside of hard codes should be reserved. In addition, nodes only turn on P2P ports and deploy DDoS defense strategy.
 
-#### 2. MasterNode
+#### 2. Authority Masternode
 
-There are 101 MasterNodes in the VeChainThor network. VeChain official recommendation is to deploy MasterNodes in the internal network, and they are hard to be attacked because this part of master nodes are of a large quantity. But for MasterNodes whose protocols are exposed in the public network, it's necessary to deploy anti-DDoS defense strategy. 
+There are 101 Authority Masternodes in the VeChainThor network. VeChain official recommendation is to deploy Authority Masternodes in the internal network, and they are hard to be attacked because this part of master nodes are of a large quantity. But for Authority Masternodes whose protocols are exposed in the public network, it's necessary to deploy anti-DDoS defense strategy. 
 
 
 ## security enhancement program
@@ -101,7 +101,7 @@ It is not suggested to publish the node API to the public network, if it is need
 
 #### 2.1 turn on logging
 
--It is suggested to set `--verbosity 9` initilisation parameter for BootNode and MasterNode, so as to record the complete logs.
+-It is suggested to set `--verbosity 9` initilisation parameter for BootNode and Authority Masternode, so as to record the complete logs.
 
 
 #### 2.2 set maxium number of connection peers
