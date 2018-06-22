@@ -1,32 +1,34 @@
 # VeChain core nodes security checklist
 
-> by 慢雾安全团队 & Joinsec Team
+> By SlowMist Security Team & Joinsec Team
 
-## table of contents
+### [中文版](./README.md)
+
+## Table of Contents
 * [Introduction To Security Program](#introduction-to-security-program)
 * [Core Targets Of Framework](#core-targets-of-framework)
 * [Major Problems VeChainThor Is Confronting](#major-problems-vechainthor-is-confronting)
 * [Core Design Of Framework Architecture](#core-design-of-framework-architecture)
 * [Core Defense](#core-defense)
 * [Recommended General Framework](#recommended-general-framework)
-    * [Detailed Explanation Of Each Part Of Architecture Design](#detailed-explanation-of-each-part-of-architecture-design)
-        * [1. BootNode](#1-bootNode)
-        * [2. MasterNode](#2-masterNode)
+    * [Detailed Explanation Of Each Part Of Architecture Design](#detailed-explanation-of-each-part-of-architecture-design)
+        * [1. BootNode](#1-bootNode)
+        * [2. MasterNode](#2-masterNode)
 * [Security Enhancement Program](#security-enhancement-program)
-    * [1. HTTP API Security](#1-http-api-security)
-        * [1.1 Shielding HTTP API](#11-shielding-http-api)
-        * [1.2 HTTP API Defense](#12-http-api-defense)
-    * [2. Configuration Security](#2-configuration-security)
-        * [2.1 Turn On Logging](#21-turn-on-logging)
-        * [2.2 Set Maximum Number Of Connection Peers](#22-set-maximum-number-of-connection-peers)
-        * [2.3 Avoid Using 'root' To Run 'thor'](#23-avoid-using-'root'-to-run-'thor')
-        * [2.4 Listen To Random Ports](#24-listen-to-random-ports)
-    * [3. Network Security](#3-network-security)
-        * [3.1 Cloud Service Provider](#31-cloud-service-provider)
-        * [3.2 DDoS Defense](#32-ddos-defense)
-    * [4. Main Server Security](#4-main-server-security)
-    * [5. Threat Intelligence](#5-threat-intelligence)
-    * [6. NormalNode Core Security Configuration Summary](#6-normalnode-core-security-configuration-summary)
+    * [1. HTTP API Security](#1-http-api-security)
+        * [1.1 Shielding HTTP API](#11-shielding-http-api)
+        * [1.2 HTTP API Defense](#12-http-api-defense)
+    * [2. Configuration Security](#2-configuration-security)
+        * [2.1 Turn On Logging](#21-turn-on-logging)
+        * [2.2 Set Maximum Number Of Connection Peers](#22-set-maximum-number-of-connection-peers)
+        * [2.3 Avoid Using 'root' To Run 'thor'](#23-avoid-using-'root'-to-run-'thor')
+        * [2.4 Listen To Random Ports](#24-listen-to-random-ports)
+    * [3. Network Security](#3-network-security)
+        * [3.1 Cloud Service Provider](#31-cloud-service-provider)
+        * [3.2 DDoS Defense](#32-ddos-defense)
+    * [4. Main Server Security](#4-main-server-security)
+    * [5. Threat Intelligence](#5-threat-intelligence)
+    * [6. NormalNode Core Security Configuration Summary](#6-normalnode-core-security-configuration-summary)
 * [Acknowledgement](#acknowledgement)
 
 ## Introduction To Security Program
