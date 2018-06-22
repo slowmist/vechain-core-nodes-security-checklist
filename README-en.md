@@ -43,7 +43,7 @@ Given the fact that VeChain decentralized design does not strictly rely on one s
 
 ## Major Problems VeChainThor Is Confronting
 
-1. Targeted attack on BootNode and MasterNode, such as DDOS attack.
+1. Targeted attack on BootNode and MasterNode, such as DDoS attack.
 2. HTTP API abuse and unauthorized access to HTTP API functions.
 3. Network communication failure.
 
