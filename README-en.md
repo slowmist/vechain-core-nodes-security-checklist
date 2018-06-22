@@ -21,7 +21,7 @@
     * [2. Configuration Security](#2-configuration-security)
         * [2.1 Turn On Logging](#21-turn-on-logging)
         * [2.2 Set Maximum Number Of Connection Peers](#22-set-maximum-number-of-connection-peers)
-        * [2.3 Avoid Using 'root' To Run 'thor'](#23-avoid-using-'root'-to-run-'thor')
+        * [2.3 Avoid Using 'root' To Run 'thor'](#23-avoid-using-root-to-run-thor)
         * [2.4 Listen To Random Ports](#24-listen-to-random-ports)
     * [3. Network Security](#3-network-security)
         * [3.1 Cloud Service Provider](#31-cloud-service-provider)
